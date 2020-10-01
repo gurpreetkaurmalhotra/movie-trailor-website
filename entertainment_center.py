@@ -5,7 +5,7 @@ import urllib
 import json
 
 
-# It takes in the name of a movie as an argument.
+# Taking name of movie as an argument.
 def get_info(movie_name):
     # Get a response after opening the URL
     response = urllib.urlopen(
@@ -21,7 +21,7 @@ def get_info(movie_name):
 # A call to the get_info method of json API
 # which takes the name of the movie as an argument
 info = get_info("Minions")
-# Reference of media which takes title of the movie, plot, poster URL
+# Reference of media which takes name of the movie, plot, poster URL
 # and youtube link of the trailor as an argument.
 minions = media.Movie(info['Title'], info['Plot'], info['Poster'],
                       "https://www.youtube.com/watch?v=P9-FCC6I7u0")
